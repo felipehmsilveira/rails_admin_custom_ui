@@ -50,6 +50,9 @@ RailsAdmin.config do |config|
   end
 
   config.model Sale do
+
+    #navigation_icon 'fa fa-money'
+
     create do
       field  :client
       field  :sale_date
@@ -126,6 +129,24 @@ RailsAdmin.config do |config|
       field  :address
 
     end
+  end
+
+  config.model Discount do
+    parent Product
+  end
+
+  config.model Sale do
+    parent User
+    weight -2
+  end
+
+  config.model Comission do
+    parent User
+    weight -1
+  end
+
+  config.model Client do
+    parent User
   end
 
   config.model ProductQuantity do
