@@ -1,12 +1,7 @@
 RailsAdmin.config do |config|
 
-  config.main_app_name = ["Ruby", "Admin"]
-
-  config.navigation_static_links = {
-    'Google' => 'https://google.com'
-  }
-
-  config.navigation_static_label = "Lins Úteis"
+  require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
+  RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
 
   ### Popular gems integration
 
@@ -16,43 +11,31 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
-  ## == CancanCan ==
+  ## == Cancan ==
   config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
 
   ## == PaperTrail ==
-  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail = 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
-  # config.show_gravatar = true
+  # config.show_gravatar true
 
-  config.model Product do
-    create do
-      field  :name
-      field  :description
-      field  :status
-      field  :price
-      field  :photo
-    end
+  config.main_app_name = ["Ruby", "Admin"]
 
-    edit do
-      field  :name
-      field  :description
-      field  :status
-      field  :price
-      field  :photo
-    end
-  end
+  config.navigation_static_links = {
+    'Google' => 'https://google.com'
+  }
+
+  config.navigation_static_label = "Lins Úteis"
 
   config.model Sale do
-
-    #navigation_icon 'fa fa-money'
-
+    navigation_icon 'fa fa-money'
     create do
       field  :client
       field  :sale_date
@@ -131,6 +114,7 @@ RailsAdmin.config do |config|
     end
   end
 
+
   config.model Discount do
     parent Product
   end
@@ -157,6 +141,7 @@ RailsAdmin.config do |config|
     visible false
   end
 
+
   config.model ProductQuantity do
     edit do
       field :product
@@ -170,6 +155,7 @@ RailsAdmin.config do |config|
     end
   end
 
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -180,6 +166,9 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    pdf do
+      only User
+    end
 
     ## With an audit adapter, you can add:
     # history_index

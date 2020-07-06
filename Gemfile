@@ -32,13 +32,23 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Rails ADMIN
 gem 'rails_admin'
 
-gem 'devise',  '~> 4.3' #Authentication
+#Authentication
+gem 'devise',  '~> 4.3' 
 
-gem 'cancancan', '~> 1.15.0' #Autorização
+#Autorização
+gem 'cancancan', '~> 1.15.0' 
 
-gem 'carrierwave' #Upload file
+#Upload file
+gem 'carrierwave' 
 
-gem 'rails_admin_rollincode', :git => 'https://github.com/felipehmsilveira/ui_rails_admin'
+#iu_admin
+gem 'rails_admin_rollincode', :git => 'https://github.com/felipehmsilveira/ui_rails_admin' 
+
+# Gem para gerar os pdfs
+gem 'prawn-rails'
+
+# Gem para gerar os gráficos
+gem 'gruff'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
