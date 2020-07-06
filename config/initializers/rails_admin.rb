@@ -34,6 +34,35 @@ RailsAdmin.config do |config|
 
   config.navigation_static_label = "Lins Úteis"
 
+  config.model Contact do
+    create do
+      field  :name
+      field  :email
+      field  :phone
+      field  :position
+      field  :client
+
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+    edit do
+      field  :name
+      field  :email
+      field  :phone
+      field  :position
+      field  :client
+
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
+
   config.model Sale do
     navigation_icon 'fa fa-money'
     create do
@@ -92,6 +121,7 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
+      field  :contact
 
 
       field :user_id, :hidden do
@@ -152,6 +182,9 @@ RailsAdmin.config do |config|
     visible false
   end
 
+  config.model Contact do
+    visible false
+  end
 
   config.model ProductQuantity do
     edit do

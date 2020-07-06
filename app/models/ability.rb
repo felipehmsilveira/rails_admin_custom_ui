@@ -15,6 +15,7 @@ class Ability
         can :read, Comission, user_id: user.id
         can :manage, ProductQuantity, user_id: user.id
         can :manage, Address, user_id: user.id
+        can :manage, Contact
       elsif user.kind == 'manager'
         can :manage, :all
       end
