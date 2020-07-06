@@ -29,10 +29,10 @@ $(function () {
   });
 
   for (var i = 0; i <= array_menu.length; i++) {
-    $('.sub-menu-' + i).wrapAll("");
+    $('.sub-menu-' + i).wrapAll("<div class='sub-menu-container' />");
   }
 
-  $('.sub-menu-container').hide();
+  $('.sub-menu-container-1').hide();
 
   handleActiveBase();
   function handleActiveBase() {
