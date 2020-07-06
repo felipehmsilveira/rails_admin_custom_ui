@@ -38,7 +38,7 @@ gem 'cancancan', '~> 1.15.0' #Autorização
 
 gem 'carrierwave' #Upload file
 
-gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin_rollincode', :git => 'https://github.com/felipehmsilveira/ui_rails_admin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
