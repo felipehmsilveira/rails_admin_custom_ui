@@ -114,8 +114,17 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model User do 
+    navigation_icon 'fa fa-user-circle'
+  end
+
+  config.model Product do
+    navigation_icon 'fa fa-paperclip'
+  end
+
 
   config.model Discount do
+    navigation_icon 'fa fa-scissors'
     parent Product
   end
 
@@ -125,11 +134,13 @@ RailsAdmin.config do |config|
   end
 
   config.model Comission do
+    navigation_icon 'fa fa-credit-card-alt'
     parent User
     weight -1
   end
 
   config.model Client do
+    navigation_icon 'fa fa-user-o'
     parent User
   end
 

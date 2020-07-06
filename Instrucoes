@@ -29,3 +29,6 @@ $background: #E9F0F5;
 $ apt install libmagickcore-6.q16-dev
 ou
 $ sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev
+
+- Font awasome
+https://fontawesome.com/v4.7.0/icons/
