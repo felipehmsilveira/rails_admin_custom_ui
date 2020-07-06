@@ -9,10 +9,88 @@ pt-BR:
       client:
         one: Cliente
         other: Clientes
+      address:
+        one: Endereço
+        other: Endereços
+      comission:
+        one: Comissão
+        other: Comissões
+      discount:  
+        one: Desconto
+        other: Descontos
+      product:
+        one: Produto
+        other: Produtos
+      sale:
+        one: Venda
+        other: Vendas
+      user:
+        one: Usuário
+        other: Usuários
     attributes:
       client:
         name: "Nome"
         company_name: "Nome da Empresa"
+        document: "Documento"
+        user: "Usuário"
+        address: "Endereço"
+        phone: "Telefone"
+        notes: "Notificações"
+      address:
+        country: "País"
+        city: "Cidade"
+        state: "Estado"
+        neighborhood: "Vizinho"
+        street: "Rua"
+        number: "Número"
+        client: "Cliente"
+        user_id: "Usuário"
+      comission:
+        sale: "Venda"
+        value: "Valor"
+        user: "Usuário"
+        note: "Notificação"
+      discount:
+        name: "Nome"
+        description: "Descrição"
+        value: "Valor"
+        kind: "Tipo"
+        sales: "Vendas"
+      product:
+        name: "Nome"
+        description: "Descrição"
+        price: "Preço"
+        photo: "Foto"
+        product_quantities: "Quantidades do produto"
+        created_at: "Data da criação"
+        updated_at: "Última modificação"
+      user:
+        name: "Nome"
+        kind: "Tipo"
+        comissions: "Comissões"
+        addresses: "Endereços"
+        clients: "Clientes"
+        product_quantities: "Quantidades do produto"
+        sales: "Vendas"
+        notes: "Notificações"
+        document: "Documento"
+        password: "Senha"
+        password_confirmation: "Confimação da senha"
+        reset_password_sent_at: "Redefinir a senha enviada em"
+        remember_created_at: "Lembre-se criado em"
+      sale:
+        client: "Cliente"
+        sale_date: "Data da venda"
+        user: "Usuário"
+        discount: "Desconto"
+        notes: "Notificações"
+        product_quantities: "Quantidades do produto"
+        comission: "Comissão"
+      product_quantity:
+        product: "Produto"
+        quantity: "Quantidade"
+        user_id: "Usuário"
+        sale: "Venda"
   views:
   admin:
     home:
