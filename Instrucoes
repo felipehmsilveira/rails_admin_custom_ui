@@ -13,4 +13,5 @@ $ sudo apt-get update
 $ sudo apt-get install sublime-text
 
 - Limpar e resetar os assets
-$ rake assets:clean && rake assets:precompile
+$ rake assets:clean 
+$ rake assets:precompile
