@@ -32,11 +32,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Rails ADMIN
 gem 'rails_admin'
 
-gem 'devise',  '~> 4.3'
+gem 'devise',  '~> 4.3' #Authentication
 
-gem 'cancancan', '~> 1.15.0'
+gem 'cancancan', '~> 1.15.0' #Autorização
 
-gem 'carrierwave'
+gem 'carrierwave' #Upload file
+
+gem 'rails_admin_rollincode', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
