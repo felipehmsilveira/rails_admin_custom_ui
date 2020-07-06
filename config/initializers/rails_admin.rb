@@ -1,5 +1,13 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Ruby", "Admin"]
+
+  config.navigation_static_links = {
+    'Google' => 'https://google.com'
+  }
+
+  config.navigation_static_label = "Lins Úteis"
+
   ### Popular gems integration
 
   ## == Devise ==
