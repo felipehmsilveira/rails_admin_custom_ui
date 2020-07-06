@@ -1,24 +1,21 @@
-# README
+# SISTEMA ADMINISTRATIVO DE VENDAS 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este sistema é um exemplo básico para o controle de vendas de uma empresa
 
-Things you may want to cover:
+Funcionalidades
 
-* Ruby version
+* Produtos
 
-* System dependencies
+* Clientes
 
-* Configuration
+* Endereços dos clientes
 
-* Database creation
+* Venda dos produtos
 
-* Database initialization
+* Comissão
 
-* How to run the test suite
+* Desconto em porcentagem e valor fixo
 
-* Services (job queues, cache servers, search engines, etc.)
+* Controle de usuário
 
-* Deployment instructions
-
-* ...
+* Perfis - Vendedor ou Gerente
